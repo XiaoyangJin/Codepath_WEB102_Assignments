@@ -1,0 +1,175 @@
+.header {
+  background-color: #0C356A;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+}
+
+.header__top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.header img {
+  margin-right: 10px;
+  border: 2px solid #FFC436;
+  border-radius: 50px;
+}
+
+.header__title {
+  color: #FFC436;
+
+  font-size: 2.5rem;
+}
+
+.header__menu__list {
+  list-style-type: none;
+
+  place-items: center;
+  width: 100%;
+}
+
+.header__menu__item {
+  padding: 1rem;
+  margin: 0 0.5rem;
+}
+
+.header__menu__item a {
+  color: white;
+
+  text-decoration: none;
+
+  padding: 1rem;
+}
+
+.header__menu__item a:hover {
+  text-decoration: underline;
+}
+
+.main__title {
+  color: #0C356A;
+
+  font-size: 1.5rem;
+
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+}
+
+.cards {
+  padding: 1rem;
+}
+
+.card {
+  background-color: #FFF0CE;
+
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  border: 1px solid black;
+  border-radius: 25px;
+}
+
+.card img {
+  margin: 1rem;
+  border: 1px solid #0C356A;
+  border-radius: 8px;
+}
+
+.card__text {
+  color: #0174BE;
+
+  margin: 1rem;
+}
+
+.card__link {
+  background-color: #FFC436;
+
+  text-decoration: none;
+
+  padding: 1rem;
+  margin: 1rem;
+  margin-top: auto;
+  border: 1px solid #0174BE;
+  border-radius: 8px;
+}
+
+.card__link:hover {
+  background-color: #0C356A;
+  color: white;
+}
+
+.footer {
+  background-color: #0C356A;
+}
+
+.footer__menu__list {
+  padding: 1rem;
+}
+
+.footer__menu__item {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+}
+
+.footer__menu__item a {
+  color: white;
+
+  font-size: smaller;
+  text-decoration: none;
+
+  padding: 1rem;
+}
+
+.footer__menu__item a:hover {
+  color: #FFF0CE;
+
+  text-decoration: underline;
+}
+
+@media (min-width: 50rem) {
+
+  .header__title {
+    font-size: 3rem;
+  }
+
+  .header__menu__list {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1rem;
+  }
+
+  .header__menu__item {
+    grid-column: span 4;
+  }
+
+  .main__title {
+    font-size: 2rem;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1rem;
+  }
+
+  .card {
+    grid-column: span 4;
+  }
+
+  .footer__menu__list {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1rem;
+  }
+
+  .footer__menu__item {
+    grid-column: span 2;
+  }
+}
