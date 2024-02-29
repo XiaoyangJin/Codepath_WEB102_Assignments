@@ -1,4 +1,5 @@
 import React from "react";
+import Card from "./Card";
 
 const CardBoard = () => {
     return (
@@ -7,13 +8,7 @@ const CardBoard = () => {
                 <main class="main">
                     <h2 class="main__title">Cats in the News</h2>
                     <div class="cards">
-                        <div class="card">
-                            <img src="https://placekitten.com/g/200/100" alt="A random cat come from placekitten" />
-                            <h3 class="card_title">Cat Using iPad</h3>
-                            <p class="card__text">Forget iPad kids, because iPad cats are the new concern among internet users who
-                                have recently witnessed a pet using the touchscreen device.</p>
-                            <a class="card__link" href="https://www.newsweek.com/owner-shocked-find-cat-ipad-1864964">Read More</a>
-                        </div>
+                        <Card img_source="http://placekitten.com/g/200/100" title='NEU' desc='Northeastern University' link="/" />
                         <div class="card">
                             <img src="http://placekitten.com/g/200/100" alt="A random cat come from placekitten" />
                             <h3 class="card_title">Therapy Cat</h3>
