@@ -4,23 +4,24 @@ Submitted by: **Xiaoyang Jin**
 
 This web app: **This is a web app contains famous visit places in or near Boston for visitors to check out**
 
-Time spent: **X** hours spent in total
+Time spent: **5** hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-- [ ] **There is a unique theme for events or resources relevant to a specific community**
-- [ ] **At least 10 unique resources or events are displayed in a responsive card format**
+- [✅] **There is a unique theme for events or resources relevant to a specific community**
+- [✅] **At least 10 unique resources or events are displayed in a responsive card format**
 
 The following **optional** features are implemented:
 
-- [ ] Buttons or links to a related resources are on each card component
-- [ ] The site is responsive for both desktop and mobile formats
+- [✅] Buttons or links to a related resources are on each card component
+- [✅] The site is responsive for both desktop and mobile formats
 
 The following **additional** features are implemented:
 
-* [ ] List anything else that you added to improve the site's functionality!
+* [✅] List anything else that you added to improve the site's functionality!
+* I added 2 break points, and change picture size and layout. Also cause I want to use my own photos, so I choose a different theme, hope it's okay.
 
 ## Video Walkthrough
 
@@ -37,7 +38,7 @@ GIF created with ...
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+Extract component is interesting. This is my first time building react all by myself and I love the framework.
 
 ## License
 
