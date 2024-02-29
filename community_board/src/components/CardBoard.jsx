@@ -6,7 +6,7 @@ const CardBoard = () => {
         <div className="CardBoard">
             <body>
                 <main class="main">
-                    <h2 class="main__title">Cats in the News</h2>
+                    <h2 class="main__title">Great Places in or near Boston</h2>
                     <div class="cards">
                         <Card img_source="src/images/MFA.jpg" title='MFA' desc='Northeastern University' link="/" />
                         <Card img_source="src/images/NiagraFall.JPG" title='Niagra Fall' desc='Northeastern University' link="/" />
