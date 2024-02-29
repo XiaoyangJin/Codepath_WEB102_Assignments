@@ -26,10 +26,7 @@ The following **additional** features are implemented:
 ## Video Walkthrough
 
 Here's a walkthrough of implemented required features:
-![Video Walkthrough](https://i.imgur.com/WMOjMS8.gif)
-
-
-<img src='https://i.imgur.com/WMOjMS8.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+https://i.imgur.com/WMOjMS8.gif
 
 GIF created with QuickTime Player and imgur
 
