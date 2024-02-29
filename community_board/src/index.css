@@ -76,6 +76,9 @@
 }
 
 .card img {
+  width: 20rem;
+  height: 15rem;
+
   margin: 1rem;
   border: 1px solid #0C356A;
   border-radius: 8px;
@@ -163,6 +166,11 @@
     grid-column: span 4;
   }
 
+  .card img {
+    width: 14rem;
+    height: 9rem;
+  }
+
   .footer__menu__list {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -171,5 +179,12 @@
 
   .footer__menu__item {
     grid-column: span 2;
+  }
+}
+
+@media (min-width: 80rem) {
+  .card img {
+    width: 22rem;
+    height: 15rem;
   }
 }
