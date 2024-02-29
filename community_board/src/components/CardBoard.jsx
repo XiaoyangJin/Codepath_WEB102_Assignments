@@ -8,18 +8,18 @@ const CardBoard = () => {
                 <main class="main">
                     <h2 class="main__title">Cats in the News</h2>
                     <div class="cards">
-                        <Card img_source="src/images/RhodeIsland.jpg" title='NEU' desc='Northeastern University' link="/" />
-                        <Card img_source="http://placekitten.com/g/200/100" title='Harvard' desc='Northeastern University' link="/" />
-                        <Card img_source="http://placekitten.com/g/200/100" title='MIT' desc='Northeastern University' link="/" />
-                        <Card img_source="http://placekitten.com/g/200/100" title='Manchester By The Sea' desc='Northeastern University' link="/" />
-                        <Card img_source="http://placekitten.com/g/200/100" title='Deer Island' desc='Northeastern University' link="/" />
-                        <Card img_source="http://placekitten.com/g/200/100" title='White Mountain' desc='Northeastern University' link="/" />
-                        <Card img_source="http://placekitten.com/g/200/100" title='Revere Beach' desc='Northeastern University' link="/" />
-                        <Card img_source="http://placekitten.com/g/200/100" title='Walden Pond' desc='Northeastern University' link="/" />
-                        <Card img_source="http://placekitten.com/g/200/100" title='Capcode' desc='Northeastern University' link="/" />
-                        <Card img_source="http://placekitten.com/g/200/100" title='Rhode Island' desc='Northeastern University' link="/" />
-                        <Card img_source="http://placekitten.com/g/200/100" title='Salem' desc='Northeastern University' link="/" />
-                        <Card img_source="http://placekitten.com/g/200/100" title='Gateway' desc='Northeastern University' link="/" />
+                        <Card img_source="src/images/MFA.jpg" title='MFA' desc='Northeastern University' link="/" />
+                        <Card img_source="src/images/NiagraFall.JPG" title='Niagra Fall' desc='Northeastern University' link="/" />
+                        <Card img_source="src/images/Acadia.JPG" title='Acadia' desc='Northeastern University' link="/" />
+                        <Card img_source="src/images/Manchester.JPG" title='Manchester By The Sea' desc='Northeastern University' link="/" />
+                        <Card img_source="src/images/DeerIsland.jpg" title='Deer Island' desc='Northeastern University' link="/" />
+                        <Card img_source="src/images/WhiteMount.jpg" title='White Mountain' desc='Northeastern University' link="/" />
+                        <Card img_source="src/images/RevereBeach.jpg" title='Revere Beach' desc='Northeastern University' link="/" />
+                        <Card img_source="src/images/WaldenPond.jpg" title='Walden Pond' desc='Northeastern University' link="/" />
+                        <Card img_source="src/images/Capcode.jpg" title='Capcode' desc='Northeastern University' link="/" />
+                        <Card img_source="src/images/RhodeIsland.jpg" title='Rhode Island' desc='Northeastern University' link="/" />
+                        <Card img_source="src/images/Salem.jpg" title='Salem' desc='Northeastern University' link="/" />
+                        <Card img_source="src/images/Gateway.jpg" title='Gateway' desc='Northeastern University' link="/" />
 
                     </div>
                 </main>
