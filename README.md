@@ -27,10 +27,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 https://i.imgur.com/WMOjMS8.gif
-<img src='https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHU4aGFtamhla3d3OGpwcGpuZmo3bWV0YzdiajRtYjFobnBnZWxncyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/GHH1xMcK6EpoaFVqKG/giphy-downsized-large.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-
-https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHU4aGFtamhla3d3OGpwcGpuZmo3bWV0YzdiajRtYjFobnBnZWxncyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/GHH1xMcK6EpoaFVqKG/giphy-downsized-large.gif
-
+<iframe src="https://giphy.com/embed/GHH1xMcK6EpoaFVqKG" width="480" height="309" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/GHH1xMcK6EpoaFVqKG">via GIPHY</a></p>
 GIF created with QuickTime Player and imgur
 
 ## Notes
