@@ -1,0 +1,32 @@
+# Dependency directories
+node_modules/
+
+# Build outputs
+build/
+dist/
+*.bundle.js
+
+# Environment configuration files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE and editor directories
+.idea/
+.vscode/
+*.swp
+*.swo
+*.sublime-workspace
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Optional: Exclude specific files or patterns
+# logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
