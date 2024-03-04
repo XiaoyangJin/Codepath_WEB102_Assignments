@@ -4,7 +4,6 @@
 }
 
 body {
-
   font-family: "Monaco", sans-serif;
 }
 
@@ -70,10 +69,30 @@ body {
 
   width: 400px;
   height: 300px;
+
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
 }
 
-.card__answer {
+.card__grid__container:hover .card {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.card__front,
+.card__back {
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.card__front {
+  color: black;
+}
+
+.card__back {
   color: white;
+  transform: rotateY(180deg);
 }
 
 @media (min-width: 50rem) {
