@@ -1,3 +1,13 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+
+  font-family: "Monaco", sans-serif;
+}
+
 .header {
 
   display: flex;
@@ -60,6 +70,10 @@
 
   width: 400px;
   height: 300px;
+}
+
+.card__answer {
+  color: white;
 }
 
 @media (min-width: 50rem) {
