@@ -1,9 +1,35 @@
 import React from "react";
+import { useState } from "react";
 import Card from "./Card";
 
 const Main = () => {
+    const allCards = [
+        { id: 1, question: "question1", answer: "answer1" },
+        { id: 2, question: "question2", answer: "answer2" },
+        { id: 3, question: "question3", answer: "answer3" }
+    ];
+
+    const [activeCardIndex, setActiveCardIndex] = useState(0);
+
+    // Function to go to the previous card
+    const prevCard = () => {
+        setActiveCardIndex((prevIndex) => (prevIndex - 1 + allCards.length) % allCards.length);
+    };
+
+    // Function to go to the next card
+    const nextCard = () => {
+        setActiveCardIndex((prevIndex) => (prevIndex + 1) % allCards.length);
+    };
+
     return (
-        <Card question="What is Bubble Sort" answer="A comparison-based sorting algorithm where each pair of adjacent elements is compared and swapped if they are in the wrong order, effectively 'bubbling' the highest or lowest element to its correct position in each iteration." />
+        <div className="main">
+            <button class="icon-button" onClick={prevCard}>
+                <i class="gg-arrow-left"></i>
+            </button>
+            <button class="icon-button" onClick={nextCard}>
+                <i class="gg-arrow-right"></i>
+            </button>
+        </div>
     )
 }
 
