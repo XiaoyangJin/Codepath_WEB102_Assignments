@@ -18,8 +18,48 @@
 }
 
 .header img {
-  width: 8rem;
-  height: 5rem;
+  width: 6rem;
+  height: 4rem;
 
-  margin-right: 2rem;
+  margin-right: 1rem;
+}
+
+.header__menu__list {
+  list-style-type: none;
+
+  place-items: center;
+  width: 100%;
+}
+
+.header__menu__item {
+  padding: 1rem;
+  margin: 0 0.5rem;
+
+  cursor: pointer;
+}
+
+.header__menu__item:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 50rem) {
+  .header__title {
+    font-size: 3rem;
+  }
+
+  .header img {
+    width: 9rem;
+    height: 6rem;
+  }
+
+  .header__menu__list {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+
+    gap: 1rem;
+  }
+
+  .header__menu__item {
+    grid-column: span 4;
+  }
 }
