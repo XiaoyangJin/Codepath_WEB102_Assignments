@@ -42,6 +42,26 @@
   text-decoration: underline;
 }
 
+.card__grid__container {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  background-color: gray;
+
+  margin: 2rem;
+  padding: 2rem;
+
+  border: 1px solid black;
+  border-radius: 8px;
+
+  flex: 0 0 70%;
+  max-width: 70%;
+}
+
 @media (min-width: 50rem) {
   .header__title {
     font-size: 3rem;
@@ -61,5 +81,15 @@
 
   .header__menu__item {
     grid-column: span 4;
+  }
+
+  .grid-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .card {
+    flex: 0 0 65%;
+    max-width: 65%;
   }
 }
