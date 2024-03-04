@@ -58,8 +58,8 @@
   border: 1px solid black;
   border-radius: 8px;
 
-  flex: 0 0 70%;
-  max-width: 70%;
+  width: 400px;
+  height: 300px;
 }
 
 @media (min-width: 50rem) {
@@ -89,7 +89,7 @@
   }
 
   .card {
-    flex: 0 0 65%;
-    max-width: 65%;
+    width: 600px;
+    height: 300px;
   }
 }
