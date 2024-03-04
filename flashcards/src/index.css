@@ -72,9 +72,11 @@ body {
 
   transition: transform 0.8s;
   transform-style: preserve-3d;
+
+  cursor: pointer;
 }
 
-.card__grid__container:hover .card {
+.card.is-flipped {
   transform: rotateY(180deg);
 }
 

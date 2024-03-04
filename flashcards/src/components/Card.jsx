@@ -1,9 +1,15 @@
 import React from "react";
+import { useState } from "react";
 
 const Card = (props) => {
+
+    const [isFlip, setFlip] = useState(false);
+
+    const flip = () => setFlip(!isFlip);
+
     return (
         <div className="card__grid__container">
-            <div className="card">
+            <div className={`card ${isFlip ? 'is-flipped' : ''}`} onClick={flip}>
                 <div className="card__front">
                     <h3 className="card__question">{props.question}</h3>
                 </div>
