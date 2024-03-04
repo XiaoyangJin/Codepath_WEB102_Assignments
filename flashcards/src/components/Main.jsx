@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import Card from "./Card";
-import '../css/DirecBtn.css'
+import '../css/DirecBtn.css';
 
 const Main = () => {
     const allCards = [
@@ -33,16 +33,20 @@ const Main = () => {
 
     return (
         <div className="main">
-            <Card question={allCards[activeCardIndex].question} answer={allCards[activeCardIndex].answer} />
+            <Card
+                key={allCards[activeCardIndex].id}
+                question={allCards[activeCardIndex].question}
+                answer={allCards[activeCardIndex].answer}
+            />
 
-            <button class="icon-button" onClick={prevCard}>
-                <i class="gg-arrow-left"></i>
+            <button className="icon-button" onClick={prevCard}>
+                <i className="gg-arrow-left"></i>
             </button>
-            <button class="icon-button" onClick={nextCard}>
-                <i class="gg-arrow-right"></i>
+            <button className="icon-button" onClick={nextCard}>
+                <i className="gg-arrow-right"></i>
             </button>
         </div>
-    )
+    );
 }
 
 export default Main;
