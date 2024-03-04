@@ -10,7 +10,7 @@ const Header = () => {
                 </div>
                 <div className="header__menu">
                     <ul className="header__menu__list">
-                        <li className="header__menu__item">Algorithum</li>
+                        <li className="header__menu__item">Algorithm</li>
                         <li className="header__menu__item">Data Structure</li>
                         <li className="header__menu__item">System Design</li>
                     </ul>
