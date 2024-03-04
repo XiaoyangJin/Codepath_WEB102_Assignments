@@ -12,7 +12,6 @@ function App() {
       <body>
         <Header />
         <Main />
-        <DirectBtn />
       </body>
     </div>
   )

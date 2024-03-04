@@ -23,6 +23,8 @@ const Main = () => {
 
     return (
         <div className="main">
+            <Card question={allCards[activeCardIndex].question} answer={allCards[activeCardIndex].answer} />
+
             <button class="icon-button" onClick={prevCard}>
                 <i class="gg-arrow-left"></i>
             </button>
