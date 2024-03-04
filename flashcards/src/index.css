@@ -83,7 +83,6 @@ body {
 /* Position the front and back side */
 .card__front,
 .card__back {
-  position: absolute;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }

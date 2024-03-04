@@ -7,11 +7,11 @@ const Main = () => {
     const allCards = [
         {
             id: 1, question: "What is Merge Sort",
-            answer: "Merge Sort divides the array into two halves, recursively sorts them, and then merges the sorted halves. It has a consistent time complexity of O(n log n) in the worst, average, and best cases. Merge Sort requires additional space for merging, making it not in-place, whereas Quick Sort is an in-place sorting algorithm but may perform poorly in the worst-case scenario."
+            answer: "Merge Sort divides the array into two halves, recursively sorts them, and then merges the sorted halves."
         },
         {
             id: 2, question: "What is Stability in Sorting Algorithms?",
-            answer: "Stability in sorting algorithms refers to the preservation of the original order of records with equal keys (values). In other words, if two elements are equal, a stable sorting algorithm ensures that the relative order of these elements is the same before and after sorting."
+            answer: "Stability in sorting algorithms refers to the preservation of the original order of records with equal keys (values)."
         },
         {
             id: 3, question: "Why is Insertion Sort preferred over Quick Sort for small arrays?",
