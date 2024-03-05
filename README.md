@@ -65,7 +65,8 @@ I created header menu which can redirect user to related quizzes(will implement 
 
 Here's a walkthrough of implemented required features:
 https://imgur.com/a/cPh5u5U
-<img src='http://i.imgur.com/a/cPh5u5U.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+https://imgur.com/RAIFQFd
+<img src='http://i.imgur.com/RAIFQFd.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  
