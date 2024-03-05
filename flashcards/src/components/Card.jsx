@@ -9,8 +9,9 @@ const Card = (props) => {
 
     return (
         <div className="card__grid__container">
-            <div className={`card ${isFlip ? 'is-flipped' : ''}`} onClick={flip}>
+            <div className={`card ${isFlip ? 'is-flipped' : ''} ${props.color}`} onClick={flip}>
                 <div className="card__front">
+                    <p className="level">{props.level}</p>
                     <h3 className="card__question">{props.question}</h3>
                 </div>
                 <div className="card__back">

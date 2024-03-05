@@ -59,7 +59,7 @@ body {
 }
 
 .card {
-  background-color: gray;
+  background-color: rgb(224, 219, 218);
 
   margin: 2rem;
   padding: 2rem;
@@ -94,6 +94,22 @@ body {
 .card__back {
   color: white;
   transform: rotateY(180deg);
+}
+
+.level {
+  margin-bottom: 1rem;
+}
+
+.easy {
+  background-color: rgb(199, 235, 166);
+}
+
+.medium {
+  background-color: rgb(236, 192, 156);
+}
+
+.hard {
+  background-color: rgb(234, 155, 138);
 }
 
 @media (min-width: 50rem) {
