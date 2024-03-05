@@ -28,6 +28,7 @@ The following **additional** features are implemented:
 Here's a walkthrough of implemented required features:
 https://i.imgur.com/WMOjMS8.gif
 GIF created with QuickTime Player and imgur
+<img src='http://i.imgur.com/WMOjMS8.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 ## Notes
 
@@ -64,8 +65,6 @@ I created header menu which can redirect user to related quizzes(will implement 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented required features:
-https://imgur.com/a/cPh5u5U
-https://imgur.com/RAIFQFd
 <img src='http://i.imgur.com/RAIFQFd.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
