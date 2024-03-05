@@ -67,8 +67,8 @@ body {
   border: 1px solid black;
   border-radius: 8px;
 
-  width: 400px;
-  height: 300px;
+  width: 500px;
+  height: 400px;
 
   transition: transform 0.8s;
   transform-style: preserve-3d;
@@ -94,6 +94,13 @@ body {
 .card__back {
   color: white;
   transform: rotateY(180deg);
+}
+
+.card__back img {
+  margin-top: 1rem;
+
+  width: 18rem;
+  height: 12rem;
 }
 
 .level {
@@ -139,7 +146,14 @@ body {
   }
 
   .card {
-    width: 600px;
-    height: 300px;
+    width: 900px;
+    height: 500px;
+  }
+
+  .card__back img {
+    width: 27rem;
+    height: 18rem;
+
+    margin-top: 2rem;
   }
 }

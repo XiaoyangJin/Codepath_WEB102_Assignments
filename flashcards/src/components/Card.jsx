@@ -12,10 +12,12 @@ const Card = (props) => {
             <div className={`card ${isFlip ? 'is-flipped' : ''} ${props.color}`} onClick={flip}>
                 <div className="card__front">
                     <p className="level">{props.level}</p>
-                    <h3 className="card__question">{props.question}</h3>
+                    <p className="card__question">{props.question}</p>
+                    <img src={props.question_src} alt={props.question_alt} />
                 </div>
                 <div className="card__back">
-                    <h3 className="card__answer">{props.answer}</h3>
+                    <p className="card__answer">{props.answer}</p>
+                    <img src={props.answer_src} alt={props.answer_alt} />
                 </div>
             </div>
         </div>
