@@ -42,6 +42,8 @@ const Main = () => {
 
     return (
         <div className="main">
+            <p className="intro">Wanna test your chance to pass an interview? Try it!</p>
+            <p className="total">Number of cards: {allCards.length} </p>
             <Card
                 key={allCards[activeCardIndex].id}
                 color={allCards[activeCardIndex].color}
