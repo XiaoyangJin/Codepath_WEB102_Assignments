@@ -30,6 +30,10 @@ const Main = () => {
 
     const [activeCardIndex, setActiveCardIndex] = useState(0);
 
+    const [current__question, setCurrent__question] = useState('');
+    const [input, setInput] = useState('');
+    const [correct__answer, setCorrect__answer] = useState('');
+
     // Function to go to the previous card
     const prevCard = () => {
         setActiveCardIndex((prevIndex) => (prevIndex - 1 + allCards.length) % allCards.length);
@@ -60,7 +64,10 @@ const Main = () => {
                 answer_alt={allCards[activeCardIndex].answer_alt}
 
             />
-
+            <form className="form__answer">
+                <h3>Guess the answer here: </h3>
+                <div className="input__answer" id={correct__answer}>{input}</div>
+            </form>
             <button className="icon-button" onClick={prevCard}>
                 <i className="gg-arrow-left"></i>
             </button>
