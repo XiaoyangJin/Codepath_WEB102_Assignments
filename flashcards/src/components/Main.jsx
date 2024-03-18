@@ -40,6 +40,10 @@ const Main = () => {
         setActiveCardIndex((prevIndex) => (prevIndex + 1) % allCards.length);
     };
 
+    const shuffleCard = () => {
+
+    }
+
     return (
         <div className="main">
             <p className="intro">Wanna test your chance to pass an interview? Try it!</p>
@@ -62,6 +66,9 @@ const Main = () => {
             </button>
             <button className="icon-button" onClick={nextCard}>
                 <i className="gg-arrow-right"></i>
+            </button>
+            <button className="icon-button" onClick={shuffleCard}>
+                <i class="gg-sync"></i>
             </button>
         </div>
     );

@@ -119,6 +119,12 @@ body {
   background-color: rgb(234, 155, 138);
 }
 
+.icon-button {
+  height: 2rem;
+  width: 3rem;
+  margin-right: 1rem;
+}
+
 @media (min-width: 50rem) {
   .header__title {
     font-size: 3rem;
