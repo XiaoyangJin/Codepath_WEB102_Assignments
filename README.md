@@ -1,37 +1,47 @@
-# Web Development Project 1 - *Community Board*
+# Web Development Project 4 - *Stumble Upon*
 
 Submitted by: **Xiaoyang Jin**
 
-This web app: **This is a web app contains famous visit places in or near Boston for visitors to check out**
+This web app: **Allows users to randomly learn about art works from Havard Musemu**
 
-Time spent: **5** hours spent in total
+Time spent: **X** hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-- [✅] **There is a unique theme for events or resources relevant to a specific community**
-- [✅] **At least 10 unique resources or events are displayed in a responsive card format**
+- [ ] **Clicking a button creates a new API fetch request and displays at least three attributes from the returned JSON data**
+- [ ] **Only one item/API call is viewable at a time**
+- [ ] **API calls appear random to the user**
+- [ ] **At least one image is displayed per API call**
+- [ ] **Clicking on a displayed value for one attribute adds it to a displayed ban list**
+- [ ] **Attributes on the ban list prevent further images/API results with that attribute from being displayed**
 
 The following **optional** features are implemented:
 
-- [✅] Buttons or links to a related resources are on each card component
-- [✅] The site is responsive for both desktop and mobile formats
+- [ ] Multiple types of attributes can be added to the ban list
+- [ ] Users can see a stored history of their previously viewed items from their session
 
 The following **additional** features are implemented:
 
-* [✅] List anything else that you added to improve the site's functionality!
-* I added 2 break points, and change picture size and layout. Also cause I want to use my own photos, so I choose a different theme, hope it's okay.
+* [ ] List anything else that you added to improve the site's functionality!
 
 ## Video Walkthrough
 
-Here's a walkthrough of implemented required features:
-https://i.imgur.com/WMOjMS8.gif
-GIF created with QuickTime Player and imgur
+Here's a walkthrough of implemented user stories:
+
+<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+<!-- Replace this with whatever GIF tool you used! -->
+GIF created with ...  
+<!-- Recommended tools:
+[Kap](https://getkap.co/) for macOS
+[ScreenToGif](https://www.screentogif.com/) for Windows
+[peek](https://github.com/phw/peek) for Linux. -->
 
 ## Notes
 
-Extract component is interesting. This is my first time building react all by myself and I love the framework.
+Describe any challenges encountered while building the app.
 
 ## License
 
