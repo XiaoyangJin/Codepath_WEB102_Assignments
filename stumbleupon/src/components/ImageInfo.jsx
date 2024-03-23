@@ -4,7 +4,6 @@ import '../css/Information.css';
 const ImageInfo = ({ triggerFetch, addToHistory, addBan }) => {
     const [imageData, setImageData] = useState(null);
     const apiKey = import.meta.env.VITE_APP_ACCESS_KEY;
-    const [hasClickedDiscover, setHasClickedDiscover] = useState(false);
     const handleBanClick = (attributeLabel, attributeValue) => {
         // Example of creating a string representation of what you want to ban
         const banEntry = `${attributeLabel}: ${attributeValue}`;
@@ -12,11 +11,7 @@ const ImageInfo = ({ triggerFetch, addToHistory, addBan }) => {
     };
 
 
-
     useEffect(() => {
-        if (!hasClickedDiscover) {
-            return; // Exit early if the user hasn't clicked "Discover" yet
-        }
 
         const fetchRandomImage = async () => {
             const randomPage = Math.floor(Math.random() * 22412) + 1;
@@ -37,7 +32,7 @@ const ImageInfo = ({ triggerFetch, addToHistory, addBan }) => {
 
         fetchRandomImage();
 
-    }, [triggerFetch, hasClickedDiscover]);
+    }, [triggerFetch]);
 
     if (!imageData) {
         return <div>Loading...</div>;
