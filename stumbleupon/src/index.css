@@ -25,17 +25,13 @@ a:hover {
 
 body::before {
   content: "";
-  /* Required for pseudo-elements */
   position: absolute;
-  /* Position the pseudo-element */
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   background: rgba(255, 255, 255, 0.5);
-  /* Light white overlay; adjust opacity as needed */
   z-index: 0;
-  /* Ensure it's below the content */
 }
 
 body {
