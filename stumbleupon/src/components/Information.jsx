@@ -1,3 +1,4 @@
+import '../css/Information.css';
 import ImageInfo from "./ImageInfo";
 
 const Information = () => {
