@@ -1,6 +1,10 @@
 import '../css/Information.css';
 import ImageInfo from "./ImageInfo";
 
+const randomImage = () => {
+
+}
+
 const Information = () => {
     return (
         <div className="information">
