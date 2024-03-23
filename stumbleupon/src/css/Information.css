@@ -1,0 +1,9 @@
+.clickable-attribute {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.clickable-attribute:hover {
+    color: #007bff;
+    /* Example hover color, adjust as needed */
+}

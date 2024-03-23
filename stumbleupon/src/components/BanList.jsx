@@ -1,12 +1,18 @@
 import '../css/BanList.css';
 
-const BanList = () => {
+const BanList = ({ banList, removeBan }) => {
     return (
         <div className="banList">
             <div className="banList__title">Ban List</div>
-            <div className="banList__description">Select an attribute in your listing to ban it</div>
+            <ul className="banList__description">
+                {banList.map((item, index) => (
+                    <li key={index} onClick={() => removeBan(item)}>
+                        {item} (click to remove)
+                    </li>
+                ))}
+            </ul>
         </div>
-    )
-}
+    );
+};
 
 export default BanList;

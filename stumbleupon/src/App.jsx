@@ -8,6 +8,7 @@ const ACCESS_KEY = import.meta.env.VITE_APP_ACCESS_KEY;
 
 function App() {
   const [history, setHistory] = useState([]);
+  const [banList, setBanList] = useState([]);
 
   const addToHistory = (imageInfo) => {
     setHistory(prevHistory => {
@@ -21,11 +22,21 @@ function App() {
     setHistory([]); // Set history to an empty array, effectively clearing it
   };
 
+  const addBan = (attribute) => {
+    if (!banList.includes(attribute)) {
+      setBanList(current => [...current, attribute]);
+    }
+  };
+
+  const removeBan = (attribute) => {
+    setBanList(current => current.filter(item => item !== attribute));
+  };
+
   return (
     <div className='main'>
       <History history={history} clearHistory={clearHistory} />
-      <Information addToHistory={addToHistory} />
-      <BanList />
+      <Information addToHistory={addToHistory} addBan={addBan} />
+      <BanList banList={banList} removeBan={removeBan} />
     </div>
   )
 }
