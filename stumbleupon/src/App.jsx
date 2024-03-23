@@ -17,10 +17,13 @@ function App() {
     });
   };
 
+  const clearHistory = () => {
+    setHistory([]); // Set history to an empty array, effectively clearing it
+  };
 
   return (
     <div className='main'>
-      <History history={history} />
+      <History history={history} clearHistory={clearHistory} />
       <Information addToHistory={addToHistory} />
       <BanList />
     </div>
