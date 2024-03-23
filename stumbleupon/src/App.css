@@ -25,13 +25,18 @@ body {
 }
 
 
-.history,
+.history {
+  width: 25%;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
 .banList {
   width: 25%;
-  background-color: black;
+  background-color: rgba(255, 255, 255, 0.8);
 }
+
 
 .information {
   width: 50%;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.9);
 }
