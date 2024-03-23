@@ -1,6 +1,6 @@
 const BanList = () => {
     return (
-        <div>
+        <div className="banList">
             <p>This is banlist</p>
         </div>
     )

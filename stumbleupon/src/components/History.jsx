@@ -1,6 +1,6 @@
 const History = () => {
     return (
-        <div>
+        <div className="history">
             <p>This is the history</p>
         </div>
     )
