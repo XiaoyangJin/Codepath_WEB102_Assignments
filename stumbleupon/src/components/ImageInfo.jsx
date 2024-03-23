@@ -1,20 +1,19 @@
 import React, { useEffect, useState } from 'react';
 
-const ImageInfo = () => {
+const ImageInfo = ({ triggerFetch }) => {
     const [imageData, setImageData] = useState(null);
     const apiKey = import.meta.env.VITE_APP_ACCESS_KEY;
 
     useEffect(() => {
         const fetchRandomImage = async () => {
-            // Assuming there are about 22412 pages, as mentioned in the API docs
-            const randomPage = Math.floor(Math.random() * 22412) + 1; // Random page number
+            const randomPage = Math.floor(Math.random() * 22412) + 1;
             const url = `https://api.harvardartmuseums.org/object?apikey=${apiKey}&size=1&page=${randomPage}`;
 
             try {
                 const response = await fetch(url);
                 const data = await response.json();
                 if (data.records && data.records.length > 0) {
-                    setImageData(data.records[0]); // Assuming the first record of the page
+                    setImageData(data.records[0]);
                 }
             } catch (error) {
                 console.error("Failed to fetch image: ", error);
@@ -22,7 +21,7 @@ const ImageInfo = () => {
         };
 
         fetchRandomImage();
-    }, []); // Empty dependency array means this effect runs once after the initial render
+    }, [triggerFetch]); // Refetch when triggerFetch changes
 
     if (!imageData) {
         return <div>Loading...</div>;
