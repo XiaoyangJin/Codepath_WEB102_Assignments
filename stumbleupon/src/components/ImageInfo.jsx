@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-const ImageInfo = ({ triggerFetch }) => {
+const ImageInfo = ({ triggerFetch, addToHistory }) => {
     const [imageData, setImageData] = useState(null);
     const apiKey = import.meta.env.VITE_APP_ACCESS_KEY;
 
@@ -14,6 +14,8 @@ const ImageInfo = ({ triggerFetch }) => {
                 const data = await response.json();
                 if (data.records && data.records.length > 0) {
                     setImageData(data.records[0]);
+                    addToHistory(data.records[0]);
+                    console.log(data.records[0]);
                 }
             } catch (error) {
                 console.error("Failed to fetch image: ", error);
@@ -21,7 +23,8 @@ const ImageInfo = ({ triggerFetch }) => {
         };
 
         fetchRandomImage();
-    }, [triggerFetch]); // Refetch when triggerFetch changes
+
+    }, [triggerFetch]);
 
     if (!imageData) {
         return <div>Loading...</div>;

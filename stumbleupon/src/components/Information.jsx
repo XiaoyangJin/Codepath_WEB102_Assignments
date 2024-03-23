@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../css/Information.css';
 import ImageInfo from "./ImageInfo";
 
-const Information = () => {
+const Information = ({ addToHistory }) => {
     const [fetchTrigger, setFetchTrigger] = useState(false);
 
     const randomImage = () => {
@@ -14,7 +14,7 @@ const Information = () => {
             <h1 className="title">Welcome to Harvard Gallery!</h1>
             <div className="subtitle">Discover some amazing master pieces here!</div>
             <div className="emoji">🎨 🖼️ 📷 🗿 🗺️ 🧑‍🎨 🌌 🧩</div>
-            <ImageInfo triggerFetch={fetchTrigger} />
+            <ImageInfo triggerFetch={fetchTrigger} addToHistory={addToHistory} />
             <button className="discover__btn" onClick={randomImage}>🔄 Discover</button>
         </div>
     );
