@@ -1,0 +1,165 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "Monaco", sans-serif;
+}
+
+.header {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  padding: 1rem;
+}
+
+.header__top {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+}
+
+.header img {
+  width: 6rem;
+  height: 4rem;
+
+  margin-right: 1rem;
+}
+
+.header__menu__list {
+  list-style-type: none;
+
+  place-items: center;
+  width: 100%;
+}
+
+.header__menu__item {
+  padding: 1rem;
+  margin: 0 0.5rem;
+
+  cursor: pointer;
+}
+
+.header__menu__item:hover {
+  text-decoration: underline;
+}
+
+.card__grid__container {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  background-color: rgb(224, 219, 218);
+
+  margin: 2rem;
+  padding: 2rem;
+
+  border: 1px solid black;
+  border-radius: 8px;
+
+  width: 500px;
+  height: 400px;
+
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+
+  cursor: pointer;
+}
+
+.card.is-flipped {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.card__front,
+.card__back {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.card__front {
+  color: black;
+}
+
+.card__back {
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.card__back img {
+  margin-top: 1rem;
+
+  width: 18rem;
+  height: 12rem;
+}
+
+.level {
+  margin-bottom: 1rem;
+}
+
+.easy {
+  background-color: rgb(199, 235, 166);
+}
+
+.medium {
+  background-color: rgb(236, 192, 156);
+}
+
+.hard {
+  background-color: rgb(234, 155, 138);
+}
+
+.icon-button {
+  height: 2rem;
+  width: 3rem;
+  margin-right: 1rem;
+}
+
+@media (min-width: 50rem) {
+  .header__title {
+    font-size: 3rem;
+  }
+
+  .header img {
+    width: 9rem;
+    height: 6rem;
+  }
+
+  .header__menu__list {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+
+    gap: 1rem;
+  }
+
+  .header__menu__item {
+    grid-column: span 4;
+  }
+
+  .grid-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .card {
+    width: 900px;
+    height: 500px;
+  }
+
+  .card__back img {
+    width: 27rem;
+    height: 18rem;
+
+    margin-top: 2rem;
+  }
+}
