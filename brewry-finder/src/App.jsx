@@ -21,11 +21,11 @@ function App() {
   }, []);
 
   return (
-    <div className="whole-page">
-      <h1>Find Brewery</h1>
-      <ul>
+    <div className="container">
+      <h1 className='title'>Find Brewery</h1>
+      <ul className='list'>
         {breweries.map((brewery) => (
-          <li key={brewery.id}>
+          <li key={brewery.id} className='list__item'>
             {brewery.name} - {brewery.brewery_type} - {brewery.city}, {brewery.state}
           </li>
         ))}

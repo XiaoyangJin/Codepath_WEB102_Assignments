@@ -1,0 +1,24 @@
+.container {
+  background-color: #884c2a;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  color: #e0e1e8;
+
+  font-size: 2.5rem;
+}
+
+.list {
+  color: #ecce9e;
+}
+
+.list__item {
+  list-style: none;
+  margin: 1rem;
+
+  font-size: 1.5rem;
+}
