@@ -1,0 +1,81 @@
+.container {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  color: #3e0c01;
+
+  font-size: 2.5rem;
+}
+
+.statistics-container {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.stat-card {
+  background-color: #e0e1e8;
+  color: #3e0c01;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 30%;
+
+  margin: 0.5rem;
+}
+
+.stat-card h2 {
+  margin-top: 0;
+}
+
+.stat-card ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.stat-card li {
+  padding: 4px 0;
+}
+
+.search-bar input {
+  padding: 10px;
+  margin: 20px 0;
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+  /* Adds some space between filter inputs */
+  flex-wrap: wrap;
+  /* Ensures filters wrap on small screens */
+}
+
+.filters input,
+.filters select {
+  flex-grow: 1;
+  /* Allows inputs to grow and fill available space */
+}
+
+
+.list {
+  color: #ecce9e;
+
+  background-color: #84633a;
+  border: 2px solid #ccc;
+  border-radius: 25px;
+}
+
+.list__item {
+  list-style: none;
+  margin: 1rem;
+
+  font-size: 1.5rem;
+}
