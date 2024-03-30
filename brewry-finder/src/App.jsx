@@ -20,12 +20,16 @@ function App() {
     .sort((a, b) => b[1] - a[1])
     .slice(0, 5);
 
+  const [searchTerm, setSearchTerm] = useState('');
+  const [filteredBreweries, setFilteredBreweries] = useState([]);
+
   useEffect(() => {
     const fetchAllBreweryData = async () => {
       try {
         const response = await fetch("https://api.openbrewerydb.org/v1/breweries");
         const data = await response.json();
         setBreweries(data);
+        setFilteredBreweries(data);
       } catch (error) {
         console.error("Failed to fetch breweries:", error);
       }
@@ -34,9 +38,27 @@ function App() {
     fetchAllBreweryData();
   }, []);
 
+  useEffect(() => {
+    // Filter breweries whenever the search term changes
+    const results = breweries.filter(brewery =>
+      brewery.name.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    console.log('Search Term:', searchTerm);
+    console.log('Filtered Results:', results);
+    setFilteredBreweries(results);
+  }, [searchTerm, breweries]);
+
   return (
     <div className="container">
       <h1 className='title'>Find Brewery</h1>
+      <div className="search-bar">
+        <input
+          type="text"
+          placeholder="Search by name..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
+      </div>
       <div className="statistics-container">
         {/* Total Number of Breweries */}
         <div className="stat-card">
@@ -65,7 +87,7 @@ function App() {
         </div>
       </div>
       <ul className='list'>
-        {breweries.map((brewery) => (
+        {filteredBreweries.map((brewery) => (
           <li key={brewery.id} className='list__item'>
             {brewery.name} - {brewery.brewery_type} - {brewery.city}, {brewery.state}
           </li>
