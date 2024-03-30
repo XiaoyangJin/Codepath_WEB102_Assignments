@@ -23,6 +23,10 @@ function App() {
   const [searchTerm, setSearchTerm] = useState('');
   const [filteredBreweries, setFilteredBreweries] = useState([]);
 
+  const [selectedType, setSelectedType] = useState('');
+  const [selectedState, setSelectedState] = useState('');
+
+
   useEffect(() => {
     const fetchAllBreweryData = async () => {
       try {
@@ -39,26 +43,66 @@ function App() {
   }, []);
 
   useEffect(() => {
-    // Filter breweries whenever the search term changes
-    const results = breweries.filter(brewery =>
-      brewery.name.toLowerCase().includes(searchTerm.toLowerCase())
-    );
-    console.log('Search Term:', searchTerm);
-    console.log('Filtered Results:', results);
+    let results = breweries;
+
+    if (searchTerm) {
+      results = results.filter(brewery =>
+        brewery.name.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+    }
+
+    if (selectedType) {
+      results = results.filter(brewery => brewery.brewery_type === selectedType);
+    }
+
+    if (selectedState) {
+      results = results.filter(brewery => brewery.state === selectedState);
+    }
+
     setFilteredBreweries(results);
-  }, [searchTerm, breweries]);
+  }, [searchTerm, breweries, selectedType, selectedState]);
+
 
   return (
     <div className="container">
       <h1 className='title'>Find Brewery</h1>
-      <div className="search-bar">
+      <div className="filters">
         <input
           type="text"
           placeholder="Search by name..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
+
+        <select
+          value={selectedType}
+          onChange={(e) => setSelectedType(e.target.value)}
+        >
+          <option value="">Select Type</option>
+          {/* Populate these options based on your data or predefined list */}
+          <option value="micro">Micro</option>
+          <option value="regional">Regional</option>
+          <option value="brewpub">Brewpub</option>
+        </select>
+
+        <select
+          value={selectedState}
+          onChange={(e) => setSelectedState(e.target.value)}
+        >
+          <option value="">Select State</option>
+          {/* Populate these options based on your data or predefined list */}
+          <option value="California">California</option>
+          <option value="New York">New York</option>
+          <option value="Texas">Texas</option>
+          <option value="Texas">Oklahoma</option>
+          <option value="Texas">Oregon</option>
+          <option value="Texas">Nevada</option>
+          <option value="Texas">Massachusetts</option>
+          <option value="Texas">Laois</option>
+          <option value="Texas">Idaho</option>
+        </select>
       </div>
+
       <div className="statistics-container">
         {/* Total Number of Breweries */}
         <div className="stat-card">

@@ -50,6 +50,20 @@
   border-radius: 4px;
 }
 
+.filters {
+  display: flex;
+  gap: 10px;
+  /* Adds some space between filter inputs */
+  flex-wrap: wrap;
+  /* Ensures filters wrap on small screens */
+}
+
+.filters input,
+.filters select {
+  flex-grow: 1;
+  /* Allows inputs to grow and fill available space */
+}
+
 
 .list {
   color: #ecce9e;
