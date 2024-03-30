@@ -94,12 +94,12 @@ function App() {
           <option value="California">California</option>
           <option value="New York">New York</option>
           <option value="Texas">Texas</option>
-          <option value="Texas">Oklahoma</option>
-          <option value="Texas">Oregon</option>
-          <option value="Texas">Nevada</option>
-          <option value="Texas">Massachusetts</option>
-          <option value="Texas">Laois</option>
-          <option value="Texas">Idaho</option>
+          <option value="Oklahoma">Oklahoma</option>
+          <option value="Oregon">Oregon</option>
+          <option value="Nevada">Nevada</option>
+          <option value="Massachusetts">Massachusetts</option>
+          <option value="Laois">Laois</option>
+          <option value="Idaho">Idaho</option>
         </select>
       </div>
 
