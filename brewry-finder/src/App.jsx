@@ -1,5 +1,8 @@
 import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+import Filters from './components/Filters';
+
 import './App.css';
 
 function App() {
@@ -65,78 +68,54 @@ function App() {
 
 
   return (
-    <div className="container">
-      <h1 className='title'>Find Brewery</h1>
-      <div className="filters">
-        <input
-          type="text"
-          placeholder="Search by name..."
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
+    <Router>
+      <div className="container">
+        <h1 className='title'>Find Brewery</h1>
+        <Filters
+          searchTerm={searchTerm}
+          onSearchTermChange={(e) => setSearchTerm(e.target.value)}
+          selectedType={selectedType}
+          onTypeChange={(e) => setSelectedType(e.target.value)}
+          selectedState={selectedState}
+          onStateChange={(e) => setSelectedState(e.target.value)}
         />
 
-        <select
-          value={selectedType}
-          onChange={(e) => setSelectedType(e.target.value)}
-        >
-          <option value="">Select Type</option>
-          <option value="micro">Micro</option>
-          <option value="regional">Regional</option>
-          <option value="brewpub">Brewpub</option>
-        </select>
+        <div className="statistics-container">
+          {/* Total Number of Breweries */}
+          <div className="stat-card">
+            <h2>Total Breweries</h2>
+            <p>{totalBreweries}</p>
+          </div>
 
-        <select
-          value={selectedState}
-          onChange={(e) => setSelectedState(e.target.value)}
-        >
-          <option value="">Select State</option>
-          <option value="California">California</option>
-          <option value="New York">New York</option>
-          <option value="Texas">Texas</option>
-          <option value="Oklahoma">Oklahoma</option>
-          <option value="Oregon">Oregon</option>
-          <option value="Nevada">Nevada</option>
-          <option value="Massachusetts">Massachusetts</option>
-          <option value="Laois">Laois</option>
-          <option value="Idaho">Idaho</option>
-        </select>
+          {/* Breweries by Type */}
+          <div className="stat-card">
+            <h2>Breweries by Type</h2>
+            <ul>
+              {Object.entries(breweriesByType).map(([type, count]) => (
+                <li key={type}>{type}: {count}</li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Top 5 States */}
+          <div className="stat-card">
+            <h2>Top 5 States</h2>
+            <ul>
+              {topStates.map(([state, count]) => (
+                <li key={state}>{state}: {count}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+        <ul className='list'>
+          {filteredBreweries.map((brewery) => (
+            <li key={brewery.id} className='list__item'>
+              {brewery.name} - {brewery.brewery_type} - {brewery.city}, {brewery.state}
+            </li>
+          ))}
+        </ul>
       </div>
-
-      <div className="statistics-container">
-        {/* Total Number of Breweries */}
-        <div className="stat-card">
-          <h2>Total Breweries</h2>
-          <p>{totalBreweries}</p>
-        </div>
-
-        {/* Breweries by Type */}
-        <div className="stat-card">
-          <h2>Breweries by Type</h2>
-          <ul>
-            {Object.entries(breweriesByType).map(([type, count]) => (
-              <li key={type}>{type}: {count}</li>
-            ))}
-          </ul>
-        </div>
-
-        {/* Top 5 States */}
-        <div className="stat-card">
-          <h2>Top 5 States</h2>
-          <ul>
-            {topStates.map(([state, count]) => (
-              <li key={state}>{state}: {count}</li>
-            ))}
-          </ul>
-        </div>
-      </div>
-      <ul className='list'>
-        {filteredBreweries.map((brewery) => (
-          <li key={brewery.id} className='list__item'>
-            {brewery.name} - {brewery.brewery_type} - {brewery.city}, {brewery.state}
-          </li>
-        ))}
-      </ul>
-    </div>
+    </Router>
   )
 }
 

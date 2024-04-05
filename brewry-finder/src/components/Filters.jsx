@@ -10,7 +10,7 @@ function Filters({ searchTerm, onSearchTermChange, selectedType, onTypeChange, s
 
             <select
                 value={selectedType}
-                onChange={(e) => setSelectedType(e.target.value)}
+                onChange={onTypeChange}
             >
                 <option value="">Select Type</option>
                 <option value="micro">Micro</option>
@@ -20,7 +20,7 @@ function Filters({ searchTerm, onSearchTermChange, selectedType, onTypeChange, s
 
             <select
                 value={selectedState}
-                onChange={(e) => setSelectedState(e.target.value)}
+                onChange={onStateChange}
             >
                 <option value="">Select State</option>
                 <option value="California">California</option>
