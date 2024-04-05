@@ -7,6 +7,7 @@ import BreweryList from './components/BreweryList';
 import BreweryDetail from './components/BreweryDetail';
 
 import './App.css';
+import BreweriesCountByStateChart from './components/BreweryTypeDistributionChart';
 
 function App() {
   const [breweries, setBreweries] = useState([]);
@@ -88,6 +89,8 @@ function App() {
           breweriesByType={breweriesByType}
           topStates={topStates}
         />
+
+        <BreweriesCountByStateChart />
 
         <Routes>
           <Route path="/" element={<BreweryList breweries={filteredBreweries} />} />
