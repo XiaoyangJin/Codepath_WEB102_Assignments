@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Filters from './components/Filters';
 import Statistics from './components/Statistics';
+import BreweryList from './components/BreweryList';
 
 import './App.css';
 
@@ -87,13 +88,10 @@ function App() {
           topStates={topStates}
         />
 
-        <ul className='list'>
-          {filteredBreweries.map((brewery) => (
-            <li key={brewery.id} className='list__item'>
-              {brewery.name} - {brewery.brewery_type} - {brewery.city}, {brewery.state}
-            </li>
-          ))}
-        </ul>
+        <Routes>
+          <Route path="/" element={<BreweryList breweries={filteredBreweries} />} />
+          {/* Define other routes here */}
+        </Routes>
       </div>
     </Router>
   )
