@@ -74,28 +74,30 @@ function App() {
   return (
     <Router>
       <div className="container">
-        <h1 className='title'>Find Brewery</h1>
-        <Filters
-          searchTerm={searchTerm}
-          onSearchTermChange={(e) => setSearchTerm(e.target.value)}
-          selectedType={selectedType}
-          onTypeChange={(e) => setSelectedType(e.target.value)}
-          selectedState={selectedState}
-          onStateChange={(e) => setSelectedState(e.target.value)}
-        />
+        <div className="container-overlay">
+          <h1 className='title'>Find Brewery</h1>
+          <Filters
+            searchTerm={searchTerm}
+            onSearchTermChange={(e) => setSearchTerm(e.target.value)}
+            selectedType={selectedType}
+            onTypeChange={(e) => setSelectedType(e.target.value)}
+            selectedState={selectedState}
+            onStateChange={(e) => setSelectedState(e.target.value)}
+          />
 
-        <Statistics
-          totalBreweries={totalBreweries}
-          breweriesByType={breweriesByType}
-          topStates={topStates}
-        />
+          <Statistics
+            totalBreweries={totalBreweries}
+            breweriesByType={breweriesByType}
+            topStates={topStates}
+          />
 
-        <BreweriesCountByStateChart />
+          <BreweriesCountByStateChart />
 
-        <Routes>
-          <Route path="/" element={<BreweryList breweries={filteredBreweries} />} />
-          <Route path="/brewery/:breweryId" element={<BreweryDetail />} />
-        </Routes>
+          <Routes>
+            <Route path="/" element={<BreweryList breweries={filteredBreweries} />} />
+            <Route path="/brewery/:breweryId" element={<BreweryDetail />} />
+          </Routes>
+        </div>
       </div>
     </Router>
   )

@@ -1,8 +1,15 @@
 .container {
+  background-image: url('src/assets/bucket.jpg');
 
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.container-overlay {
+  background: rgba(255, 255, 255, 0.5);
+  padding-left: 3rem;
+  padding-right: 3rem;
 }
 
 .title {
