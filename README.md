@@ -40,7 +40,7 @@ Here's a walkthrough of implemented user stories:
 
 <img src='https://i.imgur.com/wQGR8K5.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-For project 6:
+For project 6: https://i.imgur.com/wgyAWqI.gif
 <img src='https://i.imgur.com/wgyAWqI.gif' title='new Video Walkthrough' width='' alt='new Video Walkthrough' />
 
 
