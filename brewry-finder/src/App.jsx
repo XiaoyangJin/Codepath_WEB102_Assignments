@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Filters from './components/Filters';
 import Statistics from './components/Statistics';
 import BreweryList from './components/BreweryList';
+import BreweryDetail from './components/BreweryDetail';
 
 import './App.css';
 
@@ -90,7 +91,7 @@ function App() {
 
         <Routes>
           <Route path="/" element={<BreweryList breweries={filteredBreweries} />} />
-          {/* Define other routes here */}
+          <Route path="/brewery/:breweryId" element={<BreweryDetail />} />
         </Routes>
       </div>
     </Router>
