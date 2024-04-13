@@ -1,0 +1,13 @@
+.home__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+img {
+    width: 30rem;
+    height: 24rem;
+
+    margin: 2rem;
+}
