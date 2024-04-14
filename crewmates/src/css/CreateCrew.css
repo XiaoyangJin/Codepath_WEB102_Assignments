@@ -11,3 +11,13 @@
 
     margin: 2rem;
 }
+
+.create__form {
+    padding: 2rem;
+}
+
+.create__form-lable,
+.create__form-input,
+.create__form-button {
+    margin: 1rem;
+}
