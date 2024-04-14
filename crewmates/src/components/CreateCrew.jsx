@@ -5,6 +5,7 @@ import { supabase } from '../client';
 const CreateCrew = () => {
 
     const [crew, setCrew] = useState({ crewname: '', speed: 0 });
+    const [colors, setColors] = useState(['Red', 'Blue', 'Yellow', 'Black', 'Green', 'White']);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -20,7 +21,7 @@ const CreateCrew = () => {
         e.preventDefault();
         await supabase
             .from('Detail')
-            .insert({ name: crew.crewname, speed: crew.speed })
+            .insert({ name: crew.crewname, speed: crew.speed, color: crew.color })
             .select();
         window.location = "/";
     }
@@ -35,6 +36,14 @@ const CreateCrew = () => {
 
                 <label className='create__form-lable' htmlFor='speed'>Speed(mph): </label><br />
                 <input className='create__form-input' type='text' id='speed' name='speed' onChange={handleChange} /><br />
+
+                <label className='create__form-label' htmlFor='color'>Color:</label><br />
+                <select className='create__form-select' name='color' onChange={handleChange} value={crew.color}>
+                    <option value="">Select a Color</option>
+                    {colors.map(color => (
+                        <option key={color} value={color}>{color}</option>
+                    ))}
+                </select><br />
 
                 <input className='create__form-button' type="submit" value="Submit" onClick={createCrew} />
             </form>
