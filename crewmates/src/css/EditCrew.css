@@ -1,0 +1,62 @@
+.edit__form {
+    width: 30rem;
+    height: 30rem;
+
+    margin: 3rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+input {
+    margin-top: 10px;
+    width: 100%;
+    height: 45px;
+    border-radius: 8px;
+    border: 1px solid black;
+    font-size: 20px;
+    padding-left: 10px;
+}
+
+.edit__form-lable {
+    font-size: 20px;
+    padding: 1rem;
+}
+
+input[type=submit] {
+    width: 100%;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #1a1a1a;
+    color: white;
+    cursor: pointer;
+    transition: border-color 0.25s;
+    margin-top: 20px;
+}
+
+input[type=submit]:hover {
+    border-color: #646cff;
+}
+
+.delete__form-button {
+    width: 100%;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #870404;
+    color: white;
+    cursor: pointer;
+    transition: border-color 0.25s;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
