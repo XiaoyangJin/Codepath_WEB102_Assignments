@@ -43,11 +43,11 @@ const EditCrew = ({ data }) => {
     return (
         <div>
             <form className='edit__form'>
-                <lable className='edit__form-lable' for='crewname'>Crew Name: </lable><br />
-                <input className='edit__form-input' type='text' id='crewname' name='crewname' onChange={handleChange} /><br />
+                <label className='edit__form-lable' htmlFor='crewname'>Crew Name: </label><br />
+                <input className='edit__form-input' type='text' id='crewname' name='name' value={crew.name} onChange={handleChange} /><br />
 
-                <lable className='edit__form-lable' for='speed'>Speed(mph): </lable><br />
-                <input className='edit__form-input' type='text' id='speed' name='speed' onChange={handleChange} /><br />
+                <label className='edit__form-lable' htmlFor='speed'>Speed(mph): </label><br />
+                <input className='edit__form-input' type='text' id='speed' name='speed' value={crew.speed} onChange={handleChange} /><br />
 
                 <input className='submit__form-button' type="submit" value="Submit" onClick={updateCrew} />
                 <button className='delete__form-button' onClick={deleteCrew}>Delete</button>
