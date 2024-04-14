@@ -1,0 +1,12 @@
+.gallery__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery__content img {
+    width: 20rem;
+    height: 20rem;
+    padding: 2rem;
+}
