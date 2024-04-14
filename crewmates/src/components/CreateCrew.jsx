@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../css/CreateCrew.css';
+import { supabase } from '../client';
 
 const CreateCrew = () => {
 
@@ -14,6 +15,14 @@ const CreateCrew = () => {
             }
         })
     };
+
+    const createCrew = async (e) => {
+        e.preventDefault();
+        await supabase
+            .from('Detail')
+            .insert({ name: crew.crewname, speed: crew.speed })
+            .select();
+    }
 
     return (
         <div className='create__content'>
