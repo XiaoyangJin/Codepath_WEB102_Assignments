@@ -7,6 +7,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 input {
@@ -42,6 +43,11 @@ input[type=submit] {
 
 input[type=submit]:hover {
     border-color: #646cff;
+}
+
+.edit__form-select {
+    width: 50%;
+
 }
 
 .delete__form-button {
