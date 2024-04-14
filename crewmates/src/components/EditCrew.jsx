@@ -8,7 +8,8 @@ import '../css/EditCrew.css';
 const EditCrew = ({ data }) => {
 
     const { id } = useParams();
-    const [crew, setCrew] = useState({ id: null, name: "", speed: "" });
+    const [crew, setCrew] = useState({ id: null, name: "", speed: "", color: "" });
+    const [colors, setColors] = useState(['Red', 'Blue', 'Yellow', 'Black', 'Green', 'White']);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -24,7 +25,7 @@ const EditCrew = ({ data }) => {
         e.preventDefault();
         await supabase
             .from('Detail')
-            .update({ name: crew.name, speed: crew.speed })
+            .update({ name: crew.name, speed: crew.speed, color: crew.color })
             .eq('id', id);
 
         window.location = '/';
@@ -48,6 +49,13 @@ const EditCrew = ({ data }) => {
 
                 <label className='edit__form-lable' htmlFor='speed'>Speed(mph): </label><br />
                 <input className='edit__form-input' type='text' id='speed' name='speed' value={crew.speed} onChange={handleChange} /><br />
+
+                <select className='edit__form-select' name='color' onChange={handleChange} value={crew.color || ''}>
+                    <option value="">Select a Color</option>
+                    {colors.map(color => (
+                        <option key={color} value={color}>{color}</option>
+                    ))}
+                </select><br />
 
                 <input className='submit__form-button' type="submit" value="Submit" onClick={updateCrew} />
                 <button className='delete__form-button' onClick={deleteCrew}>Delete</button>
