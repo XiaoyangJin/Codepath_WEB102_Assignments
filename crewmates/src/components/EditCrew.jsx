@@ -1,4 +1,5 @@
 import React from 'react';
+import { useEffect } from 'react';
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { supabase } from '../client';
@@ -10,6 +11,24 @@ const EditCrew = ({ data }) => {
     const { id } = useParams();
     const [crew, setCrew] = useState({ id: null, name: "", speed: "", color: "" });
     const [colors, setColors] = useState(['Red', 'Blue', 'Yellow', 'Black', 'Green', 'White']);
+
+    useEffect(() => {
+        const fetchCrew = async () => {
+            const { data, error } = await supabase
+                .from('Detail')
+                .select('name, speed, color')
+                .eq('id', id)
+                .single(); // Fetch the single record based on the ID
+
+            if (error) {
+                console.error('Error fetching crew:', error);
+            } else {
+                setCrew(data); // Set the crew state with the fetched data
+            }
+        };
+
+        fetchCrew();
+    }, [id]);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -50,6 +69,7 @@ const EditCrew = ({ data }) => {
                 <label className='edit__form-lable' htmlFor='speed'>Speed(mph): </label><br />
                 <input className='edit__form-input' type='text' id='speed' name='speed' value={crew.speed} onChange={handleChange} /><br />
 
+                <label className='edit__form-lable' htmlFor='color'>Color: </label><br />
                 <select className='edit__form-select' name='color' onChange={handleChange} value={crew.color || ''}>
                     <option value="">Select a Color</option>
                     {colors.map(color => (
