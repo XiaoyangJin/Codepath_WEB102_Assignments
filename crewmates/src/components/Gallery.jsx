@@ -14,7 +14,7 @@ const Gallery = (props) => {
         const fetchCrews = async () => {
             const { data } = await supabase
                 .from('Detail')
-                .select('id, name, speed, color');
+                .select();
 
             setCrews(data);
         }
