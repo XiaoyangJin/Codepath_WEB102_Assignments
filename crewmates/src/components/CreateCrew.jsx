@@ -22,6 +22,7 @@ const CreateCrew = () => {
             .from('Detail')
             .insert({ name: crew.crewname, speed: crew.speed })
             .select();
+        window.location = "/";
     }
 
     return (
@@ -35,7 +36,7 @@ const CreateCrew = () => {
                 <lable className='create__form-lable' for='speed'>Speed(mph): </lable><br />
                 <input className='create__form-input' type='text' id='speed' name='speed' onChange={handleChange} /><br />
 
-                <input className='create__form-button' type="submit" value="Submit" />
+                <input className='create__form-button' type="submit" value="Submit" onClick={createCrew} />
             </form>
         </div>
     )
